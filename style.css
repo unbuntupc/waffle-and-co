@@ -1,0 +1,45 @@
+:root{--hd:#C738A4;--bg:#FFE6F5;--ink:#2a1024;--card:#fff;--blue:#2FC4EA;--yel:#FFC21A;--line:#000;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:600 16px/1.5 Nunito,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--hd);color:#fff;padding:8px 14px 10px;box-shadow:0 4px 0 var(--line)}
+.top{display:flex;align-items:center;gap:12px;max-width:980px;margin:auto}
+.top img{height:58px;width:auto}
+.info{font-size:13px;line-height:1.3;margin-left:auto;text-align:right}
+.info b{font-family:"Lilita One",system-ui,sans-serif;font-weight:400;font-size:15px;display:block}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:980px;margin:8px auto 0}
+nav a{flex:1 0 auto;text-align:center;font:400 17px "Lilita One",system-ui,sans-serif;color:#fff;text-decoration:none;padding:5px 12px;border-radius:99px;border:2px solid #000;background:#a42a86;white-space:nowrap}
+nav a[aria-current="true"]{background:var(--yel);color:#000}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+main{max-width:980px;margin:auto;padding:16px 14px 40px}
+.view{display:none}.view.on{display:block}
+h1,h2{font-family:"Lilita One",system-ui,sans-serif;font-weight:400;margin:4px 0 12px;font-size:30px;-webkit-text-stroke:1px #000;paint-order:stroke fill;color:#fff;text-shadow:2px 3px 0 #000}
+.car{position:relative;border:3px solid #000;border-radius:18px;overflow:hidden;background:#000;touch-action:pan-y}
+.track{display:flex;transition:transform .35s ease}
+.track{align-items:flex-start}.car{transition:height .3s ease}.track img{flex:0 0 100%;width:100%;height:auto;display:block}
+
+.ar{position:absolute;top:50%;translate:0 -50%;width:38px;height:38px;border-radius:50%;border:3px solid #000;background:var(--yel);font:400 26px "Lilita One",sans-serif;cursor:pointer;color:#000}
+.ar.l{left:8px}.ar.r{right:8px}
+.dots{display:flex;justify-content:center;gap:8px;margin:12px 0}
+.dots button{width:14px;height:14px;border-radius:50%;border:2px solid #000;background:var(--card);padding:0}
+.dots button[aria-current="true"]{background:var(--hd)}
+.cap{text-align:center;font-weight:800}
+.card{background:var(--card);border:3px solid #000;border-radius:18px;padding:18px;box-shadow:5px 6px 0 #000}
+label{display:block;font-weight:800;margin:10px 0 4px}
+input,textarea{width:100%;font:inherit;padding:10px 12px;border:3px solid #000;border-radius:12px;background:#fff;color:#000}
+.btn{margin-top:14px;font:400 20px "Lilita One",sans-serif;background:var(--blue);color:#000;border:3px solid #000;border-radius:99px;padding:8px 26px;cursor:pointer;box-shadow:3px 4px 0 #000}
+.ok{display:none;margin-top:12px;font-weight:800}
+.hud{display:flex;justify-content:space-between;font:400 20px "Lilita One",sans-serif;margin-bottom:8px}
+#g{width:100%;max-width:420px;display:block;margin:auto;border:3px solid #000;border-radius:18px;background:linear-gradient(#bdeeff,#ffe6f5);touch-action:none}
+.gw{position:relative;max-width:420px;margin:auto}
+.ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:20px;background:#ffffffcc;border-radius:18px;color:#2a1024}
+.ov p{margin:0}
+@media (max-width:520px){.car{margin:0 -14px;border-left:0;border-right:0;border-radius:0}nav a{font-size:15px;padding:5px 10px}.top img{height:48px}.info{font-size:12px}h1,h2{font-size:26px}}
+#lb{position:fixed;inset:0;z-index:20;background:#000e;overflow:auto;display:flex}#lb[hidden]{display:none}#lb img{height:88vh;width:auto;max-width:none;margin:auto;display:block}#lb span{position:fixed;top:calc(env(safe-area-inset-top,0px) + 8px);left:0;right:0;text-align:center;color:#fff;font-size:14px;pointer-events:none}
+@media (orientation:landscape) and (max-height:520px){header{display:flex;align-items:center;gap:14px;padding:4px max(14px,env(safe-area-inset-right)) 5px max(14px,env(safe-area-inset-left));box-shadow:0 3px 0 var(--line)}.top{display:contents}.top img{height:40px;order:0}nav{order:1;flex:1;margin:0;flex-wrap:nowrap;justify-content:center}nav a{flex:0 1 auto;font-size:15px;padding:3px 14px}.info{order:2;margin:0;font-size:11px;white-space:nowrap}.info b{font-size:13px}main{padding-top:10px}h1,h2{font-size:22px;margin:0 0 8px}.gw{width:fit-content}#g{width:auto;height:calc(100vh - 120px);max-height:520px}}
+@media (orientation:landscape) and (max-height:520px){#v-menu h1{display:none}.car{background:var(--bg)}.track img{height:calc(100vh - 82px);height:calc(100dvh - 82px);object-fit:contain}}
+.sl{flex:0 0 100%;position:relative}.rt{display:block;margin:0 auto;font-size:16px;padding:5px 18px}.rot .car{background:var(--bg)}.rot .track{height:100%}.rot .sl{height:100%}.rot .sl img{position:absolute;top:50%;left:50%;max-width:none;transform:translate(-50%,-50%) rotate(90deg);object-fit:contain}.rot h1{display:none}@media (orientation:landscape){.rt{display:none}}
+@media (prefers-reduced-motion:reduce){.track{transition:none}}
+@media (orientation:landscape) and (max-height:520px){header{position:fixed;top:0;left:0;bottom:0;width:calc(150px + env(safe-area-inset-left,0px));flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;padding:8px 10px 8px max(10px,env(safe-area-inset-left));box-shadow:4px 0 0 var(--line);overflow-y:auto}.top img{height:auto;width:100%;max-height:64px;object-fit:contain}nav{flex:none;flex-direction:column;flex-wrap:nowrap;justify-content:flex-start;gap:6px}nav a{flex:none;width:100%;font-size:14px;padding:4px 6px}.info{margin-top:auto;text-align:center;white-space:normal}main{margin-left:calc(150px + env(safe-area-inset-left,0px));padding:8px 12px}.track img{height:calc(100vh - 22px);height:calc(100dvh - 22px)}#g{height:calc(100vh - 100px);height:calc(100dvh - 100px)}}

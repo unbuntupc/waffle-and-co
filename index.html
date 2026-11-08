@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Waffle&amp;Co – Grenoble</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="top">
+  <img src="assets/logo.png" alt="Waffle&amp;Co">
+  <div class="info"><b>104 cours Jean Jaurès</b>38000 Grenoble</div>
+ </div>
+ <nav aria-label="Navigation">
+  <a href="#menu">Carte</a><a href="#about">Qui sommes-nous</a><a href="#contact">Contact</a><a href="#jeu">Jeu</a>
+ </nav>
+</header>
+<main>
+ <section class="view" id="v-menu">
+  <h1>Notre carte</h1>
+  <div class="car" id="car">
+   <div class="track" id="tr">
+    <img src="assets/menu-1.jpg" alt="Compose ton dessert : bubble cup, bubble waffle, tobble waffle, crêpe, nappages, toppings, glaces et fruits">
+    <img src="assets/menu-2.jpg" alt="Glaces en pot ou cornet et Ovni Waffle à 5,50 €">
+    <img src="assets/menu-3.jpg" alt="Smoothies à 6 €, mojito, boissons chaudes et fraîches">
+   </div>
+   <button class="ar l" id="pv" aria-label="Page précédente">‹</button>
+   <button class="ar r" id="nx" aria-label="Page suivante">›</button>
+  </div>
+  <div class="dots" id="dots"></div>
+  <p class="cap" id="cap"></p>
+ </section>
+
+ <section class="view" id="v-about">
+  <h1>Qui sommes-nous</h1>
+  <div class="card">
+   <p>Chez Waffle&amp;Co, on prépare des gaufres, des crêpes et des glaces à composer comme tu les aimes : un nappage, un topping, des fruits, et c’est parti.</p>
+   <p>On te propose aussi des smoothies, des mojitos sans alcool et des boissons chaudes pour une pause gourmande au cœur de Grenoble.</p>
+   <p>Retrouve-nous au 104 cours Jean Jaurès, 38000 Grenoble.</p>
+  </div>
+ </section>
+
+ <section class="view" id="v-contact">
+  <h1>Contact</h1>
+  <div class="card">
+   <div id="f">
+    <label for="n">Nom</label><input id="n" autocomplete="name">
+    <label for="e">Email</label><input id="e" type="email" autocomplete="email">
+    <label for="m">Message</label><textarea id="m" rows="5"></textarea>
+    <button class="btn" id="send" type="button">Envoyer le message</button>
+    <p class="ok" id="ok" role="status"></p>
+   </div>
+  </div>
+ </section>
+
+ <section class="view" id="v-jeu">
+  <h1>Attrape les gourmandises</h1>
+  <div class="hud"><span>Score : <span id="sc">0</span></span><span id="lv">❤❤❤</span><span>Record : <span id="bs">0</span></span></div>
+  <div class="gw">
+   <canvas id="g" width="420" height="520" aria-label="Jeu : attrape les crêpes, gaufres et bonbons, évite abeilles, fourmis et poissons-chats"></canvas>
+   <div class="ov" id="ov">
+    <p style="font:400 26px 'Lilita One',sans-serif">Prêt à manger ?</p>
+    <p>Attrape 🥞 🧇 🍬 avec le ventre.<br>Évite 🐝 🐜 🐟 !</p>
+    <p>Glisse le doigt ou utilise ← →</p>
+    <button class="btn" id="go" type="button">Jouer</button>
+   </div>
+  </div>
+ </section>
+</main>
+<div id="lb" hidden><img alt=""><span>Touche pour fermer, fais glisser pour voir toute la carte</span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
