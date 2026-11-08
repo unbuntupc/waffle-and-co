@@ -58,15 +58,20 @@
  </section>
 
  <section class="view" id="v-jeu">
-  <h1>Attrape les gourmandises</h1>
-  <div class="hud"><span>Score : <span id="sc">0</span></span><span id="lv">❤❤❤</span><span>Record : <span id="bs">0</span></span></div>
-  <div class="gw">
-   <canvas id="g" width="420" height="520" aria-label="Jeu : attrape les crêpes, gaufres et bonbons, évite abeilles, fourmis et poissons-chats"></canvas>
-   <div class="ov" id="ov">
-    <p style="font:400 26px 'Lilita One',sans-serif">Prêt à manger ?</p>
-    <p>Attrape 🥞 🧇 🍬 avec le ventre.<br>Évite 🐝 🐜 🐟 !</p>
-    <p>Glisse le doigt ou utilise ← →</p>
-    <button class="btn" id="go" type="button">Jouer</button>
+  <h1>Jeux</h1>
+  <div class="hub" id="hub"></div>
+  <div id="stage" hidden>
+   <div class="hud"><button class="mini" id="bk" type="button" aria-label="Retour aux jeux">←</button><span>⭐ <b id="sc">0</b></span><span id="cb"></span><button class="mini" id="mu" type="button" aria-label="Son">🔊</button></div>
+   <div class="gw" id="gw">
+    <canvas id="g" aria-label="Zone de jeu"></canvas>
+    <div class="ov" id="ov">
+     <p class="tt" id="ot"></p><p id="od"></p>
+     <input id="pn" maxlength="12" placeholder="Ton pseudo" autocomplete="nickname" aria-label="Ton pseudo">
+     <button class="btn" id="go" type="button">Jouer</button>
+     <button class="btn alt" id="sh" type="button" hidden>Partager mon score</button>
+     <ol class="board" id="top5"></ol>
+     <p class="small">🏆 Bientôt : classement du mois avec des lots à gagner !</p>
+    </div>
    </div>
   </div>
  </section>

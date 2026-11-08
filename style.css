@@ -43,4 +43,19 @@ input,textarea{width:100%;font:inherit;padding:10px 12px;border:3px solid #000;b
 .sl{flex:0 0 100%;position:relative}.rt{display:block;margin:0 auto;font-size:16px;padding:5px 18px}.rot .car{background:var(--bg)}.rot .track{height:100%}.rot .sl{height:100%}.rot .sl img{position:absolute;top:50%;left:50%;max-width:none;transform:translate(-50%,-50%) rotate(90deg);object-fit:contain}.rot h1{display:none}@media (orientation:landscape){.rt{display:none}}
 @media (orientation:landscape) and (max-height:520px){header{position:fixed;top:0;left:0;bottom:0;width:calc(150px + env(safe-area-inset-left,0px));flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;padding:8px 10px 8px max(10px,env(safe-area-inset-left));box-shadow:4px 0 0 var(--line);overflow-y:auto}.top img{height:auto;width:100%;max-height:64px;object-fit:contain}nav{flex:none;flex-direction:column;flex-wrap:nowrap;justify-content:flex-start;gap:6px}nav a{flex:none;width:100%;font-size:14px;padding:4px 6px}.info{margin-top:auto;text-align:center;white-space:normal}main{margin-left:calc(150px + env(safe-area-inset-left,0px));padding:8px 12px}.track img{height:calc(100vh - 22px);height:calc(100dvh - 22px)}#g{height:calc(100vh - 100px);height:calc(100dvh - 100px)}}
 @media (orientation:portrait){#lb img{height:auto;width:100%;margin:0 auto auto}.ar{position:fixed;top:55%}}
+.mini{border:2px solid #000;border-radius:50%;background:var(--yel);width:34px;height:34px;font-size:16px;cursor:pointer;padding:0}
+.hud{align-items:center}
+.gw{width:fit-content;max-width:none;margin:auto}
+#g{max-width:none;box-sizing:content-box}
+.ov{overflow:auto;gap:8px}
+.ov .tt{font:400 30px "Lilita One",sans-serif}
+.ov input{width:190px;text-align:center;padding:6px 10px}
+.ov .btn{margin-top:4px}.ov .alt{background:var(--yel)}
+.board{margin:2px 0;padding:0 0 0 22px;font-weight:800;font-size:14px;text-align:left}
+.small{font-size:12px}
+@media (orientation:landscape) and (max-height:520px){#v-jeu h1{display:none}.ov .small{display:none}.ov{gap:4px;padding:8px}.ov .tt{font-size:22px}.board{display:none}}
+[hidden]{display:none!important}
+.hub{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gc{background:var(--card);border:3px solid #000;border-radius:18px;padding:14px 8px;box-shadow:4px 5px 0 #000;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--ink)}
+.gc span{font-size:40px}.gc b{font:400 18px "Lilita One",sans-serif}.gc small{font-size:12px}
 @media (prefers-reduced-motion:reduce){.track{transition:none}}
